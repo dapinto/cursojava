@@ -23,89 +23,89 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import co.edu.usbcali.bank.domain.Cliente;
-import co.edu.usbcali.bank.dto.ClienteDTO;
-import co.edu.usbcali.bank.dto.ClienteMapper;
-import co.edu.usbcali.bank.service.ClienteService;
+import co.edu.usbcali.bank.domain.Usuario;
+import co.edu.usbcali.bank.dto.UsuarioDTO;
+import co.edu.usbcali.bank.dto.UsuarioMapper;
+import co.edu.usbcali.bank.service.UsuarioService;
 
 @RestController
-@RequestMapping("/cliente")
-public class ClienteController {
+@RequestMapping("/usuario")
+public class UsuarioController {
 
 	@Autowired
-	ClienteService clienteService;
+	UsuarioService usuarioService;
 
 	@Autowired
-	ClienteMapper clienteMapper;
+	UsuarioMapper usuarioMapper;
 
 	@GetMapping("/findById/{id}")
-	public ResponseEntity<?> findById(@PathVariable("id") Long id) {
+	public ResponseEntity<?> findById(@PathVariable("id") String id) {
 
-		Optional<Cliente> clienteOptional = clienteService.findById(id);
-		if (!clienteOptional.isPresent()) {
-			return ResponseEntity.badRequest().body("El cliente no existe");
+		Optional<Usuario> usuarioOptional = usuarioService.findById(id);
+		if (!usuarioOptional.isPresent()) {
+			return ResponseEntity.badRequest().body("El usuario no existe");
 
 		}
-		Cliente cliente = clienteOptional.get();
-		ClienteDTO clienteDTO = clienteMapper.entityToDTO(cliente);
-		return ResponseEntity.ok().body(clienteDTO);
+		Usuario usuario = usuarioOptional.get();
+		UsuarioDTO usuarioDTO = usuarioMapper.entityToDTO(usuario);
+		return ResponseEntity.ok().body(usuarioDTO);
 	}
 
 	@GetMapping("/findAll")
 	public ResponseEntity<?> findAll() {
 
-		List<Cliente> clientes = clienteService.findAll();
-		if (clientes.isEmpty()) {
-			return ResponseEntity.badRequest().body("No existen clientes");
+		List<Usuario> usuarios = usuarioService.findAll();
+		if (usuarios.isEmpty()) {
+			return ResponseEntity.badRequest().body("No existen usuarios");
 		}
 
-		List<ClienteDTO> clientesDTO = clienteMapper.toClientesDTOs(clientes);
-		return ResponseEntity.ok().body(clientesDTO);
+		List<UsuarioDTO> usuariosDTO = usuarioMapper.toUsuariosDTOs(usuarios);
+		return ResponseEntity.ok().body(usuariosDTO);
 	}
 
 	@PostMapping("/save")
-	public ResponseEntity<?> save(@Valid @RequestBody ClienteDTO clienteDTO) {
+	public ResponseEntity<?> save(@Valid @RequestBody UsuarioDTO usuarioDTO) {
 
 		try {
-			Cliente cliente = clienteMapper.dtoToEntity(clienteDTO);
-			cliente = clienteService.save(cliente);
-			clienteDTO = clienteMapper.entityToDTO(cliente);
-			return ResponseEntity.ok().body(clienteDTO);
+			Usuario usuario = usuarioMapper.dtoToEntity(usuarioDTO);
+			usuario = usuarioService.save(usuario);
+			usuarioDTO = usuarioMapper.entityToDTO(usuario);
+			return ResponseEntity.ok().body(usuarioDTO);
 		} catch (Exception e) {
 			return ResponseEntity.badRequest().body(new ResponseError("400", e.getMessage()));
 		}
 	}
 
 	@PutMapping("/update")
-	public ResponseEntity<?> update(@Valid @RequestBody ClienteDTO clienteDTO) {
+	public ResponseEntity<?> update(@Valid @RequestBody UsuarioDTO usuarioDTO) {
 
 		try {
-			Cliente cliente = clienteMapper.dtoToEntity(clienteDTO);
-			cliente = clienteService.update(cliente);
-			clienteDTO = clienteMapper.entityToDTO(cliente);
-			return ResponseEntity.ok().body(clienteDTO);
+			Usuario usuario = usuarioMapper.dtoToEntity(usuarioDTO);
+			usuario = usuarioService.update(usuario);
+			usuarioDTO = usuarioMapper.entityToDTO(usuario);
+			return ResponseEntity.ok().body(usuarioDTO);
 		} catch (Exception e) {
 			return ResponseEntity.badRequest().body(new ResponseError("400", e.getMessage()));
 		}
 	}
 
 	@DeleteMapping("/delete")
-	public ResponseEntity<?> delete(@Valid @RequestBody ClienteDTO clienteDTO) {
+	public ResponseEntity<?> delete(@Valid @RequestBody UsuarioDTO usuarioDTO) {
 
 		try {
-			Cliente cliente = clienteMapper.dtoToEntity(clienteDTO);
-			clienteService.delete(cliente);
-			return ResponseEntity.ok().body("Cliente eliminado");
+			Usuario usuario = usuarioMapper.dtoToEntity(usuarioDTO);
+			usuarioService.delete(usuario);
+			return ResponseEntity.ok().body("Usuario eliminado");
 		} catch (Exception e) {
 			return ResponseEntity.badRequest().body(new ResponseError("400", e.getMessage()));
 		}
 	}
 
 	@DeleteMapping("/deleteById/{id}")
-	public ResponseEntity<?> deleteById(@PathVariable("id") Long id) {
+	public ResponseEntity<?> deleteById(@PathVariable("id") String id) {
 		try {
-			clienteService.deleteById(id);
-			return ResponseEntity.ok().body("Cliente eliminado");
+			usuarioService.deleteById(id);
+			return ResponseEntity.ok().body("Usuario eliminado");
 		} catch (Exception e) {
 			return ResponseEntity.badRequest().body(new ResponseError("400", e.getMessage()));
 		}
