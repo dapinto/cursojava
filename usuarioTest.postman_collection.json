@@ -1,8 +1,8 @@
 {
 	"variables": [],
 	"info": {
-		"name": "clienteTest",
-		"_postman_id": "f6f79729-3b5f-6d9a-bacd-64bcb49a4bb6",
+		"name": "usuarioTest",
+		"_postman_id": "24f2b5e2-57f9-7fb4-d004-2b2f2fddce86",
 		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
@@ -10,13 +10,10 @@
 		{
 			"name": "findById",
 			"request": {
-				"url": "http://localhost:8080/bank-web/api/cliente/findById/3001",
+				"url": "http://localhost:8080/bank-web/api/usuario/findById/callbrook0",
 				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
+				"body": {},
 				"description": ""
 			},
 			"response": []
@@ -24,13 +21,10 @@
 		{
 			"name": "findAll",
 			"request": {
-				"url": "http://localhost:8080/bank-web/api/cliente/findAll",
+				"url": "http://localhost:8080/bank-web/api/usuario/findAll",
 				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
+				"body": {},
 				"description": ""
 			},
 			"response": []
@@ -38,7 +32,7 @@
 		{
 			"name": "save",
 			"request": {
-				"url": "http://localhost:8080/bank-web/api/cliente/save",
+				"url": "http://localhost:8080/bank-web/api/usuario/save",
 				"method": "POST",
 				"header": [
 					{
@@ -49,7 +43,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"clieId\": 3001,\n    \"activo\": \"S\",\n    \"direccion\": \"94 Hintze Drive\",\n    \"email\": \"hdownes0@bloomberg.com\",\n    \"nombre\": \"Diego Pinto\",\n    \"telefono\": \"62-(594)716-0300\",\n    \"tdocId\": 3\n}"
+					"raw": "{\n    \"usuUsuario\": \"homerojsimpson\",\n    \"identificacion\": 555555,\n    \"activo\": \"S\",\n    \"clave\": \"4h5yaK\",\n    \"nombre\": \"Homero J Simpson\",\n    \"tiusId\": 3\n}"
 				},
 				"description": ""
 			},
@@ -58,7 +52,7 @@
 		{
 			"name": "deleteById",
 			"request": {
-				"url": "http://localhost:8080/bank-web/api/cliente/deleteById/3001",
+				"url": "http://localhost:8080/bank-web/api/usuario/deleteById/homerojsimpson",
 				"method": "DELETE",
 				"header": [
 					{
@@ -68,10 +62,7 @@
 						"disabled": true
 					}
 				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
+				"body": {},
 				"description": ""
 			},
 			"response": []
@@ -79,7 +70,7 @@
 		{
 			"name": "delete",
 			"request": {
-				"url": "http://localhost:8080/bank-web/api/cliente/delete",
+				"url": "http://localhost:8080/bank-web/api/usuario/delete",
 				"method": "DELETE",
 				"header": [
 					{
@@ -90,7 +81,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"clieId\": 3001,\n    \"activo\": \"S\",\n    \"direccion\": \"94 Hintze Drive\",\n    \"email\": \"hdownes0@bloomberg.com\",\n    \"nombre\": \"Diego Pinto Muñoz\",\n    \"telefono\": \"62-(594)716-0300\",\n    \"tdocId\": 3\n}"
+					"raw": "{\n    \"usuUsuario\": \"homerojsimpson\",\n    \"identificacion\": 555555,\n    \"activo\": \"S\",\n    \"clave\": \"4h5yaK\",\n    \"nombre\": \"Homero J Simpson\",\n    \"tiusId\": 3\n}"
 				},
 				"description": ""
 			},
@@ -99,7 +90,7 @@
 		{
 			"name": "update",
 			"request": {
-				"url": "http://localhost:8080/bank-web/api/cliente/update",
+				"url": "http://localhost:8080/bank-web/api/usuario/update",
 				"method": "PUT",
 				"header": [
 					{
@@ -110,7 +101,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"clieId\": 3001,\n    \"activo\": \"S\",\n    \"direccion\": \"94 Hintze Drive\",\n    \"email\": \"hdownes0@bloomberg.com\",\n    \"nombre\": \"Diego Pinto Muñoz\",\n    \"telefono\": \"62-(594)716-0300\",\n    \"tdocId\": 3\n}"
+					"raw": "{\n    \"usuUsuario\": \"homerojsimpson\",\n    \"identificacion\": 555555,\n    \"activo\": \"S\",\n    \"clave\": \"contranueva\",\n    \"nombre\": \"Homero J Simpson\",\n    \"tiusId\": 3\n}"
 				},
 				"description": ""
 			},
