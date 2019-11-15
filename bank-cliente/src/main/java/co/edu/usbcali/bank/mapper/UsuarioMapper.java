@@ -1,4 +1,4 @@
-package co.edu.usbcali.bank.dto;
+package co.edu.usbcali.bank.mapper;
 
 import java.util.List;
 
@@ -6,6 +6,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 import co.edu.usbcali.bank.domain.Usuario;
+import co.edu.usbcali.bank.dto.UsuarioDTO;
 
 @Mapper
 public interface UsuarioMapper {

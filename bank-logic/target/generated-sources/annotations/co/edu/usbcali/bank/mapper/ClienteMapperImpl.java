@@ -1,7 +1,8 @@
-package co.edu.usbcali.bank.dto;
+package co.edu.usbcali.bank.mapper;
 
 import co.edu.usbcali.bank.domain.Cliente;
 import co.edu.usbcali.bank.domain.TipoDocumento;
+import co.edu.usbcali.bank.dto.ClienteDTO;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.Generated;
@@ -23,8 +24,8 @@ public class ClienteMapperImpl implements ClienteMapper {
         ClienteDTO clienteDTO = new ClienteDTO();
 
         clienteDTO.setTdocId( clienteTipoDocumentoTdocId( cliente ) );
-        clienteDTO.setClieId( cliente.getClieId() );
         clienteDTO.setActivo( cliente.getActivo() );
+        clienteDTO.setClieId( cliente.getClieId() );
         clienteDTO.setDireccion( cliente.getDireccion() );
         clienteDTO.setEmail( cliente.getEmail() );
         clienteDTO.setNombre( cliente.getNombre() );
@@ -42,8 +43,8 @@ public class ClienteMapperImpl implements ClienteMapper {
         Cliente cliente = new Cliente();
 
         cliente.setTipoDocumento( clienteDTOToTipoDocumento( clienteDTO ) );
-        cliente.setClieId( clienteDTO.getClieId() );
         cliente.setActivo( clienteDTO.getActivo() );
+        cliente.setClieId( clienteDTO.getClieId() );
         cliente.setDireccion( clienteDTO.getDireccion() );
         cliente.setEmail( clienteDTO.getEmail() );
         cliente.setNombre( clienteDTO.getNombre() );
