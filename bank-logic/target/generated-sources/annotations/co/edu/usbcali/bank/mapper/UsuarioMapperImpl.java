@@ -24,11 +24,11 @@ public class UsuarioMapperImpl implements UsuarioMapper {
         UsuarioDTO usuarioDTO = new UsuarioDTO();
 
         usuarioDTO.setTiusId( usuarioTipoUsuarioTiusId( usuario ) );
+        usuarioDTO.setUsuUsuario( usuario.getUsuUsuario() );
+        usuarioDTO.setIdentificacion( usuario.getIdentificacion() );
         usuarioDTO.setActivo( usuario.getActivo() );
         usuarioDTO.setClave( usuario.getClave() );
-        usuarioDTO.setIdentificacion( usuario.getIdentificacion() );
         usuarioDTO.setNombre( usuario.getNombre() );
-        usuarioDTO.setUsuUsuario( usuario.getUsuUsuario() );
 
         return usuarioDTO;
     }
@@ -42,11 +42,11 @@ public class UsuarioMapperImpl implements UsuarioMapper {
         Usuario usuario = new Usuario();
 
         usuario.setTipoUsuario( usuarioDTOToTipoUsuario( usuarioDTO ) );
+        usuario.setUsuUsuario( usuarioDTO.getUsuUsuario() );
         usuario.setActivo( usuarioDTO.getActivo() );
         usuario.setClave( usuarioDTO.getClave() );
         usuario.setIdentificacion( usuarioDTO.getIdentificacion() );
         usuario.setNombre( usuarioDTO.getNombre() );
-        usuario.setUsuUsuario( usuarioDTO.getUsuUsuario() );
 
         return usuario;
     }
