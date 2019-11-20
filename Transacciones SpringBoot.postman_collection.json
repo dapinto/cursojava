@@ -1,0 +1,71 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Transacciones SpringBoot",
+		"_postman_id": "93a243a5-34e9-0c03-84c6-d16825f7291a",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "retirar",
+			"request": {
+				"url": "http://127.0.0.1:9093/transaccion/retirar",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"cuenId\": \"9999-9999-9999-9999\",\n    \"valor\": 10000,\n    \"usuUsuario\": \"callbrook0\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "consignar",
+			"request": {
+				"url": "http://127.0.0.1:9093/transaccion/consignar",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"cuenId\": \"9999-9999-9999-9999\",\n    \"valor\": 10000,\n    \"usuUsuario\": \"callbrook0\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "transferir",
+			"request": {
+				"url": "http://127.0.0.1:9093/transaccion/transferir",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"cuenIdOrigen\": \"5609-7989-4644-3688\",\n    \"cuenIdDestino\": \"9999-9999-9999-9999\",\n    \"valor\": 10000,\n    \"usuUsuario\": \"callbrook0\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
