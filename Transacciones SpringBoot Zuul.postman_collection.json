@@ -28,6 +28,26 @@
 			"response": []
 		},
 		{
+			"name": "retirarActiveMQ",
+			"request": {
+				"url": "http://localhost:9595/api/send/hola2",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"cuenId\": \"9999-9999-9999-9999\",\n    \"valor\": 10000,\n    \"usuUsuario\": \"callbrook0\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
 			"name": "consignar",
 			"request": {
 				"url": "http://127.0.0.1:8080/transaccion/consignar",
