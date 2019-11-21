@@ -1,0 +1,120 @@
+{
+	"variables": [],
+	"info": {
+		"name": "clienteTest SpringBoot Zuul",
+		"_postman_id": "6a8ce0ea-f885-6e2c-875d-7a3c34f6ec24",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "findById",
+			"request": {
+				"url": "http://127.0.0.1:8080/cliente/findById/3001",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "findAll",
+			"request": {
+				"url": "http://127.0.0.1:8080/cliente/findAll",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "save",
+			"request": {
+				"url": "http://127.0.0.1:8080/cliente/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"clieId\": 3001,\n    \"activo\": \"S\",\n    \"direccion\": \"94 Hintze Drive\",\n    \"email\": \"hdownes0@bloomberg.com\",\n    \"nombre\": \"Diego Pinto\",\n    \"telefono\": \"62-(594)716-0300\",\n    \"tdocId\": 3\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "deleteById",
+			"request": {
+				"url": "http://127.0.0.1:8080/cliente/deleteById/3001",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"url": "http://127.0.0.1:8080/cliente/delete",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"clieId\": 3001,\n    \"activo\": \"S\",\n    \"direccion\": \"94 Hintze Drive\",\n    \"email\": \"hdownes0@bloomberg.com\",\n    \"nombre\": \"Diego Pinto Muñoz\",\n    \"telefono\": \"62-(594)716-0300\",\n    \"tdocId\": 3\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"url": "http://127.0.0.1:8080/cliente/update",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"clieId\": 3001,\n    \"activo\": \"S\",\n    \"direccion\": \"94 Hintze Drive\",\n    \"email\": \"hdownes0@bloomberg.com\",\n    \"nombre\": \"Diego Pinto Muñoz\",\n    \"telefono\": \"62-(594)716-0300\",\n    \"tdocId\": 3\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,120 @@
+{
+	"variables": [],
+	"info": {
+		"name": "usuarioTest SpringBoot Zuul",
+		"_postman_id": "4b46577a-7a34-c826-4741-53d8ab4527f7",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "findById",
+			"request": {
+				"url": "http://127.0.0.1:8080/usuario/findById/callbrook0",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "findAll",
+			"request": {
+				"url": "http://127.0.0.1:8080/usuario/findAll",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "save",
+			"request": {
+				"url": "http://127.0.0.1:8080/usuario/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"usuUsuario\": \"homerojsimpson\",\n    \"identificacion\": 555555,\n    \"activo\": \"S\",\n    \"clave\": \"4h5yaK\",\n    \"nombre\": \"Homero J Simpson\",\n    \"tiusId\": 3\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "deleteById",
+			"request": {
+				"url": "http://127.0.0.1:8080/usuario/deleteById/homerojsimpson",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"url": "http://127.0.0.1:8080/usuario/delete",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"usuUsuario\": \"homerojsimpson\",\n    \"identificacion\": 555555,\n    \"activo\": \"S\",\n    \"clave\": \"4h5yaK\",\n    \"nombre\": \"Homero J Simpson\",\n    \"tiusId\": 3\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"url": "http://127.0.0.1:8080/usuario/update",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"usuUsuario\": \"homerojsimpson\",\n    \"identificacion\": 555555,\n    \"activo\": \"S\",\n    \"clave\": \"contranueva\",\n    \"nombre\": \"Homero J Simpson\",\n    \"tiusId\": 3\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
